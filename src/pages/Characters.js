@@ -22,6 +22,7 @@ const Characters = () => {
 					key={character.id}
 					name={character.name}
 					image={character.image}
+					id={character.id}
 				/>
 			))}
 		</div>

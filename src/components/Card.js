@@ -1,13 +1,17 @@
-const Card = ({ name, image }) => {
+import { Link } from "react-router-dom"
+const Card = ({ name, image, id }) => {
+	const characterLink = `/characters/${id}`
 	return (
 		<div>
-			<img
-				className="Cardimg"
-				src={image}
-				alt={name}
-				style={{ width: "300px" }}
-			/>
-			<p>{name}</p>
+			<Link to={characterLink}>
+				<img
+					className="Cardimg"
+					src={image}
+					alt={name}
+					style={{ width: "300px" }}
+				/>
+				<p>{name}</p>
+			</Link>
 		</div>
 	)
 }
